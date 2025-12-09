@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Digitalt Danmark 💻🇩🇰</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
+
+</head>
+<body>
+
+<h1 class="title">
+    <EM>
+        Overskrift
+    </EM>
+</h1>
+
+<br>
+
+<section class="video">
+
+    <!-- Inspiration fra https://www.w3schools.com/tags/att_video_autoplay.asp -->
+    <div class="divVideo">
+        <video id="video" controls autoplay muted style="width: 100%; max-width:350px; height:auto">
+            <source src="JazminTraining.MP4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <br>
+    <div class="divButtons">
+        <button class="buttons" id="button1">
+            Klik videre
+        </button>
+
+        <button class="buttons" id="button2">
+            Klik videre
+        </button>
+
+        <button class="buttons" id="button3">
+            Klik videre
+        </button>
+    </div>
+
+    <h2>Kønsfordeling på IT-uddannelser</h2>
+    <div class="chart-wrapper">
+        <div class="chart-inner">
+            <canvas id="genderChart"></canvas>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="charts"></section>
+
+<script src="main.js"></script>
+</body>
+</html>
