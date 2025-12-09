@@ -1,4 +1,4 @@
-/* GLOBAL ----------------------------------------------------------------- */
+/* GLOBAL --------------------------------------------------------------- */
 
 body {
     background-color: #F7A5A5;
@@ -11,9 +11,6 @@ h1, h2 {
     font-family: 'Oswald', sans-serif;
 }
 
-
-/* TITLE ------------------------------------------------------------------ */
-
 .title {
     font-size: 50px;
     color: #ffffff;
@@ -22,7 +19,7 @@ h1, h2 {
 }
 
 
-/* VIDEO ------------------------------------------------------------------ */
+/* VIDEO --------------------------------------------------------------- */
 
 .divVideo {
     display: flex;
@@ -35,7 +32,7 @@ video {
 }
 
 
-/* BUTTONS ---------------------------------------------------------------- */
+/* BUTTONS -------------------------------------------------------------- */
 
 .divButtons {
     display: flex;
@@ -60,43 +57,42 @@ video {
     cursor: pointer;
     color: #1A2A4F;
     background-color: #ffffff;
-    text-shadow: none;
     border: 2px solid #1A2A4F;
     box-shadow: 0px 0px 20px black;
 }
 
-/* Blur effect on hover */
-.divButtons:hover .buttons {
-    filter: blur(3px);
-    opacity: 0.5;
-}
 
-.divButtons:hover .buttons:hover {
-    filter: none;
-    opacity: 1;
-}
-
-
-/* CHART CARD ------------------------------------------------------------- */
+/* CHART CARD -------------------------------------------------------------- */
 
 .chart-wrapper {
-    width: 650px;            /* STØRRE graf */
+    width: 650px;
     margin: 50px auto;
     padding: 30px;
     background-color: #1A2A4F;
     border-radius: 25px;
-    box-shadow: 0px 10px 25px rgba(0,0,0,0.20);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.20);
 }
 
 .chart-inner {
     background-color: #FFF2EF;
     padding: 30px;
     border-radius: 18px;
-    height: 380px; /* GØR GRAFEN HØJ OG SYNLIG */
+    height: 380px;
 }
 
 canvas {
     width: 100% !important;
-    height: 100% !important; /* GRAFEN FYLDER NU HELE BOKSEN */
+    height: 100% !important;
 }
 
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
