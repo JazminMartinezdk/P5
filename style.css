@@ -61,6 +61,26 @@ video {
     box-shadow: 0px 0px 20px black;
 }
 
+/* Når INGEN knap er hovered → ingen blur */
+.divButtons {
+    filter: none;
+}
+
+/* Når EN knap er hovered → blur ALLE knapper */
+.divButtons:has(.buttons:hover) .buttons {
+    filter: blur(3px);
+    opacity: 0.5;
+    transition: 0.3s ease;
+}
+
+/* Den knap du faktisk hovrer bliver skarp */
+.divButtons .buttons:hover {
+    filter: none;
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+
 
 /* CHART CARD -------------------------------------------------------------- */
 
