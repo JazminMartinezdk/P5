@@ -115,34 +115,54 @@ loadGenderDistribution();
    GRAF 3 — Doughnut (Hardcoded)
 ------------------------------------------------------------- */
 
+/* ------------------------------------------------------------
+   GRAF 3 — Doughnut (DYNAMISK FRA SERVER)
+------------------------------------------------------------- */
+
 const donutCanvas = document.querySelector("#genderDonut");
 
-new Chart(donutCanvas, {
-    type: "doughnut",
-    data: {
-        labels: ["Kvinder (%)", "Mænd (%)"],
-        datasets: [{
-            data: [31, 69],
-            backgroundColor: [
-                "rgba(247,165,165,0.9)",
-                "rgba(110,110,110,0.85)"
-            ],
-            borderRadius: 10,
-            borderWidth: 3
-        }]
-    },
-    options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        cutout: "60%"
-    }
-});
+fetch("http://localhost:3000/overall-gender-distribution")
+    .then(res => {
+        console.log("Donut API status:", res.status);
+        return res.json();
+    })
+    .then(data => {
+        console.log("Donut API data:", data);
+
+        // ⭐ Chart.js tegner grafen baseret på SERVER-data
+        new Chart(donutCanvas, {
+            type: "doughnut",
+            data: {
+                labels: ["Kvinder (%)", "Mænd (%)"],
+                datasets: [{
+                    data: [data.women, data.men],
+                    backgroundColor: [
+                        "rgba(247,165,165,0.9)",
+                        "rgba(110,110,110,0.85)"
+                    ],
+                    borderRadius: 10,
+                    borderWidth: 3
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: "60%"
+            }
+        });
+
+        // ⭐ Gør grafen synlig (fade-in havde skjult den)
+        donutCanvas.closest(".fade-in")?.classList.add("visible");
+    })
+    .catch(err => {
+        console.error("Fejl i donut-fetch:", err);
+    });
 
 
 
 /* ------------------------------------------------------------
    GRAF 4 — Lønudvikling (Hardcoded)
-------------------------------------------------------------- */
+-------------------------------------------------------------
 
 const salaryCanvas = document.querySelector("#salaryChart");
 
@@ -176,4 +196,5 @@ new Chart(salaryCanvas, {
         responsive: true,
         maintainAspectRatio: false
     }
-});
+})
+*/
