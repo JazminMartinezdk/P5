@@ -6,31 +6,29 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-h1, h2 {
-    text-align: center;
-    font-family: 'Oswald', sans-serif;
-}
+/* HEADER TEXT --------------------------------------------------------------- */
 
 .title {
     font-size: 50px;
     color: #ffffff;
     text-shadow: 6px 0px 0px black;
+    text-align: center;
     margin-top: 20px;
 }
 
+.complimentaryH1 {
+    font-size: 24px;
+    text-align: center;
+    color: #1A2A4F;
+}
 
 /* VIDEO --------------------------------------------------------------- */
 
 .divVideo {
     display: flex;
     justify-content: center;
-    margin: 20px auto;
+    margin-top: 20px;
 }
-
-video {
-    border-radius: 12px;
-}
-
 
 /* BUTTONS -------------------------------------------------------------- */
 
@@ -80,8 +78,6 @@ video {
     transform: scale(1.05);
 }
 
-
-
 /* CHART CARD -------------------------------------------------------------- */
 
 .chart-wrapper {
@@ -104,15 +100,84 @@ canvas {
     width: 100% !important;
     height: 100% !important;
 }
-
-
-.fade-in {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.9s ease-out;
+/* GRAF TITLER */
+h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #1A2A4F;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* VIDEO CARD */
+.videoBox {
+    max-width: 380px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #1A2A4F;
+    border-radius: 20px;
+    box-shadow: 0px 8px 20px rgba(0,0,0,0.25);
+}
+
+.videoBox video {
+    width: 100%;
+    border-radius: 12px;
+    display: block;
+}
+
+/* HEADER SIMPLE STYLE */
+/* HERO HEADER -------------------------------------------------- */
+
+.heroHeader {
+    text-align: center;
+    padding: 60px 20px 40px;
+}
+
+/* STOR HOVEDTITEL */
+/* HERO LAYOUT -------------------------------------------------- */
+
+.heroHeader {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* HORIZONTAL ROW (title + subtitle) */
+/* HERO ----------------------------------------------------- */
+
+.heroHeader {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Holder begge tekster i EN linje */
+.heroInline {
+    display: inline-flex;
+    align-items: center;   /* sørger for at baseline er perfekt */
+    gap: 25px;             /* afstand mellem titlerne */
+}
+
+/* Stor hovedtitel */
+.heroTitle {
+    font-size: 70px;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    /* Outline / stroke */
+    text-shadow:
+            -3px -3px 0 #1A2A4F,
+            3px -3px 0 #1A2A4F,
+            -3px  3px 0 #1A2A4F,
+            3px  3px 0 #1A2A4F;
+}
+
+/* Mindre tekst – står på LINJE med titlen */
+.heroSubtitle {
+    font-size: 32px;
+    margin: 0;
+    color: #1A2A4F;
+    font-weight: 400;
 }

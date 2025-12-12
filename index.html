@@ -10,55 +10,57 @@
 
 <body>
 
-<h1 class="title fade-in"> <em>Overskrift</em> </h1>
+
 
 <section class="video">
+    <header class="heroHeader">
+        <div class="heroInline">
+            <h1 class="heroTitle">KVINDER I IT</h1>
+            <p class="heroSubtitle">Fremtiden kalder på dig!</p>
+        </div>
+    </header>
 
-    <div class="divVideo fade-in">
-        <video id="video" controls autoplay muted style="width: 100%; max-width:350px; height:auto">
 
+
+
+    <div class="videoBox">
+        <video id="video" controls autoplay muted>
+            <source src="./video/IT_MereEndKode.mp4" type="video/mp4">
         </video>
     </div>
 
-    <div class="divButtons fade-in">
-        <button class="buttons">Klik videre</button>
-        <button class="buttons">Klik videre</button>
-        <button class="buttons">Klik videre</button>
-    </div>
-
-    <!-- GRAF 1 -->
-    <h2 class="fade-in">Kreative IT-uddannelser med flest kvinder</h2>
-    <div class="chart-wrapper fade-in">
-        <div class="chart-inner">
-            <canvas id="creativeChart"></canvas>
-        </div>
-    </div>
-
-    <!-- GRAF 2 -->
-    <h2 class="fade-in">Kønsfordeling på IT-uddannelser</h2>
-    <div class="chart-wrapper fade-in">
-        <div class="chart-inner">
-            <canvas id="genderChart"></canvas>
-        </div>
-    </div>
-
-    <!-- GRAF 3 -->
-    <h2 class="fade-in">Samlet fordeling af kvinder og mænd i IT</h2>
-    <div class="chart-wrapper fade-in">
-        <div class="chart-inner">
-            <canvas id="genderDonut"></canvas>
-        </div>
-    </div>
-
-    <!-- GRAF 4 – LINE CHART -->
-    <h2 class="fade-in">Lønudvikling for mænd og kvinder i IT</h2>
-    <div class="chart-wrapper fade-in">
-        <div class="chart-inner">
-            <canvas id="salaryChart"></canvas>
-        </div>
-    </div>
 
 </section>
+
+<div class="divButtons">
+    <button class="buttons">Klik videre</button>
+    <button class="buttons">Klik videre</button>
+    <button class="buttons">Klik videre</button>
+</div>
+
+<!-- GRAF 1 -->
+<h2>Kreative IT-uddannelser med flest kvinder</h2>
+<div class="chart-wrapper">
+    <div class="chart-inner">
+        <canvas id="creativeChart"></canvas>
+    </div>
+</div>
+
+<!-- GRAF 2 -->
+<h2>Kønsfordeling på IT-uddannelser</h2>
+<div class="chart-wrapper">
+    <div class="chart-inner">
+        <canvas id="genderChart"></canvas>
+    </div>
+</div>
+
+<!-- GRAF 3 -->
+<h2>Samlet fordeling af kvinder og mænd i IT</h2>
+<div class="chart-wrapper">
+    <div class="chart-inner">
+        <canvas id="genderDonut"></canvas>
+    </div>
+</div>
 
 <script src="main.js"></script>
 </body>
