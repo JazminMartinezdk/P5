@@ -1,8 +1,6 @@
-console.log("Happy developing ✨");
 
-/* ------------------------------------------------------------
-   SCROLL ANIMATION (fade-in når man scroller ned)
-------------------------------------------------------------- */
+
+
 
 const animatedElements = document.querySelectorAll(".fade-in");
 
@@ -16,9 +14,7 @@ const observer = new IntersectionObserver(entries => {
 
 animatedElements.forEach(el => observer.observe(el));
 
-/* ------------------------------------------------------------
-   Knapper → scroll til graf
-------------------------------------------------------------- */
+
 
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
@@ -27,12 +23,11 @@ function scrollToSection(sectionId) {
     }
 }
 
-/* ------------------------------------------------------------
-   GRAF 1 — Kreative IT-uddannelser (fra backend)
-------------------------------------------------------------- */
+
 
 async function loadCreativePrograms() {
-    const response = await fetch("http://localhost:3000/creative-programs");
+    const response =
+        await fetch("http://localhost:3000/creative-programs");
     console.log("Creative API status:", response.status);
 
     const data = await response.json();
@@ -69,12 +64,11 @@ async function loadCreativePrograms() {
     });
 }
 
-/* ------------------------------------------------------------
-   GRAF 2 — Kønsfordeling på IT-uddannelser (fra backend)
-------------------------------------------------------------- */
+
 
 async function loadGenderDistribution() {
-    const response = await fetch("http://localhost:3000/gender-distribution");
+    const response =
+        await fetch("http://localhost:3000/gender-distribution");
     console.log("Gender API status:", response.status);
 
     const data = await response.json();
@@ -110,9 +104,7 @@ async function loadGenderDistribution() {
     });
 }
 
-/* ------------------------------------------------------------
-   GRAF 3 — Donut: samlet kønsfordeling (fra backend)
-------------------------------------------------------------- */
+
 
 function loadDonut() {
     const donutCanvas = document.querySelector("#genderDonut");
@@ -153,9 +145,7 @@ function loadDonut() {
         });
 }
 
-/* ------------------------------------------------------------
-   KALD ALLE GRAFER
-------------------------------------------------------------- */
+
 
 loadCreativePrograms();
 loadGenderDistribution();
