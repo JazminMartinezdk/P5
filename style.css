@@ -195,7 +195,7 @@ h2 {
     box-shadow: 0px 8px 20px rgba(0,0,0,0.15);
 }
 
-/* FADE-IN ANIMATION ----------------------------------- */
+/* FADE-IN ANIMATION */
 
 .fade-in {
     opacity: 0;
@@ -211,7 +211,7 @@ h2 {
 
 /* Vores Budskab Sektion  */
 .message-section {
-    background-color: #F7A5A5; /* jeres pink */
+    background-color: #F7A5A5;
     padding: 50px 20px;
     margin: 60px 0;
     text-align: center;
@@ -251,7 +251,7 @@ h2 {
 .graph-source {
     font-size: 12px;
     text-align: center;
-    color: #1A2A4F; /* match jeres navy */
+    color: #1A2A4F;
     margin-top: -5px;
     margin-bottom: 40px;
     opacity: 0.7;
@@ -261,7 +261,7 @@ h2 {
 /*  FOOTER  */
 
 .custom-footer {
-    background-color: #1A2A4F; /* mørk blå fra jeres design */
+    background-color: #1A2A4F;
     padding: 50px 20px;
     text-align: center;
     color: white;
@@ -283,7 +283,7 @@ h2 {
 .footer-subtitle {
     font-size: 20px;
     margin-top: 10px;
-    color: #F7A5A5; /* pink fra jeres tema */
+    color: #F7A5A5;
 }
 
 .footer-links {
