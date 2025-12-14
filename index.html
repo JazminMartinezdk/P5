@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Digitalt Danmark 💻🇩🇰</title>
+    <title>Kvinder i IT | Fremtiden kalder på dig! 💻🇩🇰</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.6/dist/chart.umd.min.js"></script>
@@ -20,72 +20,128 @@
 
     <div class="videoBox">
         <video id="video" controls autoplay muted>
-            <source src="./video/IT_MereEndKode.mp4" type="video/mp4">
+            <source src="./video/videoItKvinde.mp4" type="video/mp4">
         </video>
     </div>
 </section>
 
 <div class="divButtons">
-    <button class="buttons">Klik videre</button>
-    <button class="buttons">Klik videre</button>
-    <button class="buttons">Klik videre</button>
+    <button class="buttons" onclick="scrollToSection('graphs')">Se grafer</button>
+    <button class="buttons" onclick="scrollToSection('message-section')">Budskab</button>
+    <button class="buttons" onclick="scrollToSection('footer-links')">Links</button>
 </div>
-
-
 
 
 <h2>Kreative IT-uddannelser med flest kvinder</h2>
 
-<section class="graphText">
-    <blockquote>
-        Mange kvinder vælger allerede kreative IT-uddannelser som Multimediedesigner og Designteknolog.
-        Det viser, at IT også handler om kreativitet, kommunikation og design – ikke kun om kodning.
-    </blockquote>
+<section id="graphs">
+
+    <section class="graphText">
+        <blockquote>
+            Mange kvinder vælger allerede kreative IT-uddannelser som Multimediedesigner og Designteknolog.
+            Det viser, at IT også handler om kreativitet, kommunikation og design – ikke kun om kodning.
+        </blockquote>
+    </section>
+
+    <div class="chart-wrapper fade-in">
+        <div class="chart-inner">
+            <canvas id="creativeChart"></canvas>
+        </div>
+    </div>
+
+    <p class="graph-source">Kilde: Danmarks Statistik, Optag 2024</p>
+
+
+
+    <h2>Kønsfordeling på IT-uddannelser</h2>
+
+    <section class="graphText">
+        <blockquote>
+            Selvom mænd stadig fylder mest på mange IT-uddannelser, viser grafen tydeligt,
+            at kvinder er stærkere repræsenteret på bestemte IT-retninger.
+            IT-verdenen er bred – og der er plads til forskellige interesser og kompetencer.
+        </blockquote>
+    </section>
+
+    <div class="chart-wrapper fade-in">
+        <div class="chart-inner">
+            <canvas id="genderChart"></canvas>
+        </div>
+    </div>
+
+    <p class="graph-source">Kilde: Danmarks Statistik, Optag 2024</p>
+
+
+
+    <h2>Samlet fordeling af kvinder og mænd i IT</h2>
+
+    <section class="graphText">
+        <blockquote>
+            På HUM/SAMF IT-uddannelser er kønsfordelingen mere balanceret.
+            Her kombineres teknologi med mennesker, samfund og kommunikation –
+            et område hvor mange kvinder allerede finder deres plads i IT.
+        </blockquote>
+    </section>
+
+    <div class="chart-wrapper fade-in">
+        <div class="chart-inner">
+            <canvas id="genderDonut"></canvas>
+        </div>
+    </div>
+
+    <p class="graph-source">Kilde: Danmarks Statistik, Optag 2024</p>
+
 </section>
 
-<div class="chart-wrapper fade-in">
-    <div class="chart-inner">
-        <canvas id="creativeChart"></canvas>
-    </div>
-</div>
+<section id="message-section" class="message-section">
 
+    <h2 class="message-title">Vores budskab</h2>
 
+    <p class="message-text">
+        IT er meget mere end hardcore programmering. Der findes mange forskellige retninger,
+        og der er plads til alle typer mennesker – også dig.
+        Flere kvinder vælger allerede kreative og designrettede IT-uddannelser,
+        og mulighederne bliver kun større i fremtiden.
+    </p>
 
+    <p class="message-text">
+        Vores mål er at vise unge kvinder, at IT-branchen rummer et væld af spændende veje:
+        UX, UI, digital konceptudvikling, projektledelse, data, kommunikation,
+        innovation og meget mere.
+    </p>
 
-<h2>Kønsfordeling på IT-uddannelser</h2>
-
-<section class="graphText">
-    <blockquote>
-        Selvom mænd stadig fylder mest på mange IT-uddannelser, viser grafen tydeligt,
-        at kvinder er stærkere repræsenteret på bestemte IT-retninger.
-        IT-verdenen er bred – og der er plads til forskellige interesser og kompetencer.
-    </blockquote>
+    <p class="message-highlight">
+        👉 IT-verdenen har brug for DIG — din kreativitet, dine idéer og din stemme.
+    </p>
 </section>
 
-<div class="chart-wrapper fade-in">
-    <div class="chart-inner">
-        <canvas id="genderChart"></canvas>
+
+<footer id="footer-links" class="custom-footer">
+
+    <h2 class="footer-title">Kvinder i IT</h2>
+
+    <p class="footer-subtitle">Flere veje. Flere muligheder. Flere kvinder i fremtidens tech </p>
+
+    <div class="footer-links">
+        <ul class="list-unstyled">
+            <li>
+                <a href="https://www.womenintech.dk" target="_blank">Women in Tech DK</a>
+            </li>
+            <li>
+                <a href="https://girlcode.dk" target="_blank">GirlCode Danmark</a>
+            </li>
+            <li>
+                <a href="https://diction.dk/digigirlz" target="_blank">Microsoft DigiGirlz</a>
+            </li>
+            <li>
+                <a href="https://itu.dk" target="_blank">IT-Universitetet</a>
+            </li>
+        </ul>
     </div>
-</div>
 
+    <p class="footer-bottom">© 2025 – KEA IT-Arkitektur • Projekt: Kvinder i IT</p>
+</footer>
 
-
-
-<h2>Samlet fordeling af kvinder og mænd i IT</h2>
-
-<section class="graphText">
-    <blockquote>
-        På HUM/SAMF IT-uddannelser er kønsfordelingen mere balanceret.
-        Her kombineres teknologi med mennesker, samfund og kommunikation –
-        et område hvor mange kvinder allerede finder deres plads i IT.
-    </blockquote>
-</section>
-
-<div class="chart-wrapper fade-in">
-    <div class="chart-inner">
-        <canvas id="genderDonut"></canvas>
-    </div>
-</div>
 
 <script src="main.js"></script>
 </body>

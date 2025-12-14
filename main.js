@@ -150,3 +150,8 @@ function loadDonut() {
 loadCreativePrograms();
 loadGenderDistribution();
 loadDonut();
+
+function scrollToSection(id) {
+    const section = document.querySelector(`#${id}`);
+    section.scrollIntoView({ behavior: "smooth" });
+}
