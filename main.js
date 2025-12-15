@@ -52,7 +52,7 @@ async function loadCreativePrograms() {
                 {
                     label: "Mænd",
                     data: men,
-                    backgroundColor: "rgba(26,42,79,0.7)"
+                    backgroundColor: "rgba(110,110,110,0.85)"
                 }
             ]
         },
