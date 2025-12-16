@@ -1,7 +1,4 @@
 
-
-
-
 const animatedElements = document.querySelectorAll(".fade-in");
 
 const observer = new IntersectionObserver(entries => {
