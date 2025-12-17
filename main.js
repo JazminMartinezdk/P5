@@ -14,11 +14,12 @@ animatedElements.forEach(el => observer.observe(el));
 
 
 function scrollToSection(sectionId) {
-    const element = document.getElementById(sectionId);
-    if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+    const section = document.querySelector(`#${sectionId}`);
+    if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
     }
 }
+
 
 
 
